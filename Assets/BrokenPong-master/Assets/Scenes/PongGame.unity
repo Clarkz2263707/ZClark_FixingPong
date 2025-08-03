@@ -395,7 +395,7 @@ GameObject:
   - component: {fileID: 307957608}
   - component: {fileID: 307957607}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Floor
   m_TagString: BounceWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -621,37 +621,37 @@ MonoBehaviour:
   playerType: 0
   s: 10
   d: 4
-  ia:
-    m_Name: Ia
+  MovementInputs:
+    m_Name: Movement Inputs
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 45f6577c-fe18-4e52-81b3-97fbb7578ab1
+    m_Id: 6cece00d-c06a-477e-bd10-df9267709b2e
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 1D Axis
-      m_Id: 2b762759-3972-41cc-a878-86ba5bf3dd06
+      m_Id: 785d362e-bb0e-4426-b9c5-6374542852ae
       m_Path: 1DAxis
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: Ia
+      m_Action: Movement Inputs
       m_Flags: 4
     - m_Name: negative
-      m_Id: 50420e46-c116-415b-96c0-5a7188565586
-      m_Path: 
+      m_Id: ed062846-1604-449c-b073-691827ea64ec
+      m_Path: <Keyboard>/s
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: Ia
+      m_Action: Movement Inputs
       m_Flags: 8
     - m_Name: positive
-      m_Id: ace681f8-5eee-490d-934d-387a0af5add3
-      m_Path: 
+      m_Id: 4b925769-a01a-4cbc-a0e1-9d118a730b29
+      m_Path: <Keyboard>/w
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: Ia
+      m_Action: Movement Inputs
       m_Flags: 8
     m_Flags: 0
 --- !u!61 &417015234
@@ -1286,14 +1286,38 @@ MonoBehaviour:
   playerType: 1
   s: 10
   d: 4
-  ia:
-    m_Name: Ia
+  MovementInputs:
+    m_Name: Movement Inputs
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 0091a13a-ccde-43fa-b586-ac10d7ba8fe2
+    m_Id: 6aecfc41-bf38-4757-8c5e-e1bb716d8f34
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 1D Axis
+      m_Id: 4da48591-543c-4842-a436-4d96b09c7b94
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement Inputs
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: ccd3bb13-157b-4ad6-ac20-af915a0db06d
+      m_Path: <Keyboard>/downArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement Inputs
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: afe20621-e13a-4da3-b916-acc89b4807c5
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement Inputs
+      m_Flags: 8
     m_Flags: 0
 --- !u!61 &710828498
 BoxCollider2D:
@@ -1353,7 +1377,7 @@ GameObject:
   - component: {fileID: 750163710}
   - component: {fileID: 750163709}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Player2Score
   m_TagString: ScoreWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1659,7 +1683,7 @@ GameObject:
   m_Component:
   - component: {fileID: 931116977}
   m_Layer: 0
-  m_Name: OtherGameObjects
+  m_Name: Ceiling & Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1948,7 +1972,7 @@ GameObject:
   - component: {fileID: 1014225937}
   - component: {fileID: 1014225936}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2050,7 +2074,7 @@ GameObject:
   - component: {fileID: 1171526702}
   - component: {fileID: 1171526701}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Ceiling
   m_TagString: BounceWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2973,7 +2997,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1823548398}
   m_Layer: 0
-  m_Name: GameObjects
+  m_Name: ScoringRegions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3006,7 +3030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1855949037}
   m_Layer: 0
-  m_Name: Art
+  m_Name: HalfCourt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3056,7 +3080,7 @@ GameObject:
   - component: {fileID: 1890164553}
   - component: {fileID: 1890164552}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Player1Score
   m_TagString: ScoreWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3277,7 +3301,7 @@ GameObject:
   - component: {fileID: 2057140519}
   - component: {fileID: 2057140518}
   m_Layer: 5
-  m_Name: Score
+  m_Name: RightScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3500,7 +3524,7 @@ GameObject:
   - component: {fileID: 2144249600}
   - component: {fileID: 2144249599}
   m_Layer: 5
-  m_Name: Score
+  m_Name: LeftScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
