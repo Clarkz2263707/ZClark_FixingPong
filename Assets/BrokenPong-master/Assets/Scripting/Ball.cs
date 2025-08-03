@@ -6,9 +6,9 @@ public class Ball : MonoBehaviour
 
     public enum CollisionTag
     {
-        ScoreWall,
         BounceWall,
-        Player
+        Player,
+        ScoreWall
     }
 
 
@@ -40,17 +40,21 @@ public class Ball : MonoBehaviour
     {
         if (other.CompareTag(tags[(int) CollisionTag.ScoreWall]))
         {
+            GameManager.Instance.IncrementScore(other.GetComponent<ScoreWall>().scoringPlayer);
             ResetBall();
+            audioSource.PlayOneShot(clip2);
         }
-        else if (other.CompareTag(tags[(int) CollisionTag.BounceWall]))
+        else if (other.CompareTag(tags[(int)CollisionTag.BounceWall]))
         {
             direction.y = -direction.y;
+            audioSource.PlayOneShot(clip3);
         }
         else if (other.CompareTag(tags[(int)CollisionTag.Player]))
         {
             direction.x = -direction.x;
             direction.y = transform.position.y - other.transform.position.y;
             direction = direction.normalized;
+            audioSource.PlayOneShot(clip1);
         }
     }
 }
