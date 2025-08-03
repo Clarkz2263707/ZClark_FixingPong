@@ -10,9 +10,9 @@ public enum PlayerType
 
 public class Paddle : MonoBehaviour
 {
-    public PlayerType playerType;
-    public float s = 10f;
-    public float d = 4f;
+    public PlayerType CurrentPlayer;
+    public float Speed = 10f;
+    public float Boundary = 4f;
 
     [SerializeField] private InputAction MovementInputs;
     private float Movement;
@@ -45,10 +45,10 @@ public class Paddle : MonoBehaviour
 
     void Update()
     {
-        float movement = Movement * s * Time.deltaTime;
+        float movement = Movement * Speed * Time.deltaTime;
         transform.Translate(0f, movement, 0f);
 
-        float clampedY = Mathf.Clamp(transform.position.y, -d, d);
+        float clampedY = Mathf.Clamp(transform.position.y, -Boundary, Boundary);
         transform.position = new Vector3(transform.position.x, clampedY, 0f);
     }
 }
